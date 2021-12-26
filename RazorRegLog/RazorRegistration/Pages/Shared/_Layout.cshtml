@@ -1,0 +1,36 @@
+﻿@using Microsoft.AspNetCore.Http
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/style.css">
+    <title>Assignment3</title>
+</head>
+<body>
+    <section class="header">
+        
+        <div class="navsection templete ">
+            <ul>
+                <li><a asp-page="/index">Home</a></li>
+                <li><a asp-page="/Contact">Contact</a></li>
+                <li><a asp-page="/feedback">Feedback</a></li>
+                @if(Context.Session.GetString("email") == null){
+                  <li><a asp-page="/signin">Login</a></li>
+                  <li><a asp-page="/signup">Register</a></li>                    
+                }else{
+                  <li><a asp-page="/userlist" >UserList</a></li>
+                  <li><a asp-page="/index" asp-page-handler="logout">Logout</a></li>
+                }
+            </ul>
+        </div>
+    </section>
+ <section>
+     @RenderBody()
+ </section>
+	<section class="footer" style="background-color:#ffa500;">
+		<p>&copy;Copyright-2021</p>
+	</section>
+</body>
+</html>

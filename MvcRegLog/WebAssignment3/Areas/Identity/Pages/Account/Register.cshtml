@@ -1,0 +1,58 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+
+<div style="background-color:white; min-height:550px;">
+<h1 style="text-align:center;">Register</h1>
+
+<div 
+    style="background-color:orange; 
+        margin-left:auto;
+        margin-right:auto;
+        width: 300px;
+        border: 3px solid #73AD21;
+        padding: 10px;">
+        <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
+            <h4 style="text-align:center">Create a new account.</h4>
+            <hr />
+            <div asp-validation-summary="All" style="color:red;"></div>
+            <div style="margin:5px; padding:5px;">
+                <label asp-for="Input.FirstName"></label>
+                <br />
+                <input asp-for="Input.FirstName" style=" margin-left: 22px;height:20px; border-radius:5px"/>
+            </div>
+            <div style="margin:5px; padding:5px;">
+                <label asp-for="Input.LastName"></label>
+                <br />
+                <input asp-for="Input.LastName" style=" margin-left: 22px;height:20px; border-radius:5px"/>
+            </div>
+            <div style="margin:5px; padding:5px;">
+                <label asp-for="Input.Email"></label>
+                <br />
+                <input asp-for="Input.Email" style=" margin-left: 22px;height:20px; border-radius:5px"/>
+            </div>
+            <div style="margin:5px; padding:5px;">
+                <label asp-for="Input.Password"></label>
+                <br />
+                <input asp-for="Input.Password"style="margin-left: 22px;height:20px; border-radius:5px"  />
+            </div>
+            <div style="margin:5px; padding:5px;">
+                <label asp-for="Input.ConfirmPassword"></label>
+                <br />
+                <input asp-for="Input.ConfirmPassword" style="margin-left: 22px;height:20px; border-radius:5px"  />
+            </div>
+             <div style="text-align:center; margin:5px; padding:5px;">
+                 <button type="submit"style="height:30px; width:90px; border-radius:5px">Register</button>
+            </div>
+           
+        </form>
+    </div>
+
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

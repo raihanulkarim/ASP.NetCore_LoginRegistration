@@ -1,0 +1,17 @@
+﻿@page
+@using Microsoft.AspNetCore.Http
+@model RazorRegistration.Pages.SuccessModel
+@{
+    ViewData["title"] = "Success";
+}
+<div class="successMsg">
+    @if(Model.logmessage != null)
+    {
+        <h4>Welcome @HttpContext.Session.GetString("firstname")</h4>
+           <p>@Model.logmessage</p>
+    }else{
+        <p>@Model.Regmessage</p>
+          <p>Please <a asp-page="/signin">Login</a></p>  
+        }
+
+</div>

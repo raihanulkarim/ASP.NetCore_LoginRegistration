@@ -1,0 +1,41 @@
+﻿@page
+@model RazorRegistration.Pages.SignUpModel
+@{
+    ViewData["title"] = "SignUp";
+}
+<div class="logregForm">
+    <form method="post" asp-page="SignUp">
+    <h3>Register</h3>
+    <div class="LogMessage">
+             @if (@Model.msg !=null)
+            {
+                <p style="color:red;">*@Model.msg</p>
+            }
+         </div>
+        <div class="logregTable">
+            <table>
+            <tr>
+                <td>First Name:</td>
+                <td><input asp-for="@Model.account.FirstName" required /></td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td><input asp-for="@Model.account.LastName" required /></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" asp-for="@Model.account.Email" required /></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" asp-for="@Model.account.Password" maxlength= "15" min= "3" required /></td>
+            </tr>
+            <tr>
+                <td>Confirm Password:</td>
+                <td><input type="password" asp-for="@Model.passCheck" required /></td>
+            </tr>
+        </table>
+        </div>
+         <input class="Logbtn" type="submit" value="Register" />
+    </form>
+</div>

@@ -1,0 +1,69 @@
+﻿@page
+@model RazorRegistration.Pages.FeedbackModel
+@{
+    ViewData["title"] = "Feedback";
+}
+    <section class="review">
+        <div class="thanks">
+        <p>Thanks for connect with us</p>
+        <p>Please, spare some moments to give us your feedback as it will help us improving ourselves.</p>
+        </div>
+        <div class="ques">
+            <form>
+                <div class="q1">
+                    <p class="questions">1. How was our overall service?</p>
+                      <div class="wrapper-class">
+                        <input type="radio" id="radio1" checked>
+                        <label for="radio1">Good</label>
+                        
+                        <input type="radio" id="radio1">
+                        <label for="radio1">Average</label>
+                        
+                        <input type="radio" id="radio1">
+                        <label for="radio1">Bad</label>
+                      </div>
+                    </div>
+                    <p class="questions">2. Your rating on our behavior?(1-5, Poor to Best)</p>
+                    <div class="wrapper-class">
+                        <input type="radio" id="radio1" checked>
+                        <label for="radio1">1</label>
+                        
+                        <input type="radio" id="radio1">
+                        <label for="radio1">2</label>
+                        
+                        <input type="radio" id="radio1">
+                        <label for="radio1">3</label>
+                        
+                        <input type="radio" id="radio1">
+                        <label for="radio1">4</label>
+                        
+                        <input type="radio" id="radio1">
+                        <label for="radio1">5</label>
+                      </div>
+                      <p class="questions">3. Where did you first hear about us?
+                        <div class="wrapper-class">
+                            <input type="radio" id="radio1" checked>
+                            <label for="radio1">Internet</label>
+                            
+                            <input type="radio" id="radio1">
+                            <label for="radio1">Social Media</label>
+                            
+                            <input type="radio" id="radio1">
+                            <label for="radio1">Friends</label>
+                            
+                            <input type="radio" id="radio1">
+                            <label for="radio1">Newspaper</label>
+                            
+                            <input type="radio" id="radio1">
+                            <label for="radio1">Others</label>
+                          </div>  
+                    <p class="questions">4.  Why did you choose us over other options?</p>
+                    <textarea name="choose" id="choose" cols="30" rows="10"></textarea>
+                    <p class="questions">5. Is there anything you’d like to add?</p>
+                    <textarea name="choose" id="choose" cols="30" rows="10"></textarea>
+            </form>
+            
+        </div>
+        <hr>
+        <input class="btnfeed" type="button" value="Submit">
+    </section>

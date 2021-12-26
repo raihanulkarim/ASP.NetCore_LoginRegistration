@@ -1,0 +1,54 @@
+﻿@page
+@model RazorRegistration.Pages.ContactModel
+@{
+    ViewData["title"] = "Contact";
+}
+ <section class="contact-content">
+        <h1>Contact Us</h1>
+        <hr>
+            <div class="contact">
+                <div class="contact-form">
+                    <form action="" method="post">
+                        <div class="name">
+                            <input type="text" placeholder="Your name">
+                        </div><div class="email">
+                            <input type="text" placeholder="Your email">
+                        </div><div class="phone">
+                            <input type="text" placeholder="Your phone number">
+                        </div>
+                        <div class="msg">
+                            <textarea cols="400" rows="10">Enter your message</textarea>
+                        </div>
+                        <div class="btn">
+                            <button>Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="contact-details">
+                <div class="contact_details">
+                    <address>
+                        <strong>Md. Raihanul Karim</strong>
+                        <p>Student,</p>
+                        <p>University of Liberal Arts Bangladesh,</p>
+                        Dhaka, 
+                        Bangladesh
+                        <div class="social">
+                            <strong>Connect Me</strong>
+                            <div class="icons">
+                                <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJqbQcwxxRtVbqGzVXJpTzRMmKXBNKtLxfkpfrvlRdcqhlSTwPDHTKVZgFLcGBvPsZGLBZg"><img src="~/imgs/email.png" alt="mail" width="40px"></a>
+                                <a href="https://www.facebook.com/raihanulkarim.ulab.cse"><img src="~/imgs/facebook.png" alt="fb" width="40px"></a>
+                                <a href="https://www.github.com/raihanulkarim"><img src="~/imgs/github.png" alt="github" width="40px"></a>
+                                <a href="https://www.twitter.com/raihanulkarim5"><img src="~/imgs/twitter.png" alt="twitter" width="40px"></a>
+                                <a href="https://www.linkedin.com/in/raihanulkarim5/"><img src="~/imgs/linkedin.png" alt="linkedin" width="40px"></a>
+                                
+                            </div>
+                        </div>
+                </address>              
+                </div>    
+            </div>
+    </section>
+    <hr>
+    <section class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.3270774223697!2d90.35714541429734!3d23.771364493893536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c0a3a014a7dd%3A0xd9ff41154dad98dc!2s1110%20Ring%20Rd%2C%20Dhaka%201207!5e0!3m2!1sen!2sbd!4v1638033862669!5m2!1sen!2sbd" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>

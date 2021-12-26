@@ -1,0 +1,56 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+<!DOCTYPE HTML>
+<HTML lang="en">
+  <HEAD>
+      <meta charset="utf-8">
+      <title>@ViewData["title"]</title>
+      <meta  name="author" content="Tanyeem">
+      <meta name="keywords" content="Beginner,Learning,CSS,HTML">
+      <meta name="viewport" content="Width=device-width,initial-scale:1.0">
+      <meta name="description" content="I'm just learning HTML and CSS">
+      <link rel="stylesheet" href="~/css/style_1.css">
+      <link rel="icon" type="image/x-icon" href="~/pics/home.png">
+    </HEAD>
+ <BODY style=background:blue>
+     <header>
+      <H1> Tanyeem As Safwan </H1>
+      <div class="navbar">
+       <a asp-action="index" asp-controller="home" class="active">Home</a>
+       <a asp-action="feedback" asp-controller="home">Feedback</a> 
+       <a asp-action="contact" asp-controller="home">Contact Me</a>
+@if (SignInManager.IsSignedIn(User))
+{
+       <a asp-action="users" asp-controller="home">Users</a>
+        <form  asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+            
+            <button  type="submit">Logout</button> 
+        </form>
+}
+else
+{
+        <a  asp-area="Identity" asp-page="/Account/Register">Register</a>
+        <a  asp-area="Identity" asp-page="/Account/Login">Login</a>
+}
+
+     </div>
+      </header>
+    <div>
+            @RenderBody()
+    </div>
+
+   <footer>
+           <div>
+          <a href="https://www.facebook.com/tanyeem.safwan" class="facebook" target="Blank" ></a>
+          <a href="https://www.instagram.com/tanyeem.ts/" class="instagram" target="Blank"></a>
+          <a href="https://twitter.com/Tanyeem3" class="twitter" target="Blank"></a>
+          <a href="https://github.com/TanyeemSafwan" class="github" target="Blank"></a>
+          <a href="https://mail.google.com/mail/u/1/#inbox?compose=CllgCJZWPLQtTfFXWWhtGVNncvtqTzxmlCpVWsHGDfZRkcHqXXdGrtvbvFpXzKTzRxmDdKrLxvV" class="gmail" target="Blank"></a>
+           </div>
+
+           </footer>
+               <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    </BODY>
+<HTML>

@@ -1,0 +1,109 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["title"] = "Feedback";
+}
+       <article>
+         <div class="tai" style="padding-left:20px">
+             <fieldset>
+             <legend>
+             Your Credentials
+             </legend>
+             <label>
+             Full Name:     <input type="text" name="name" size="30" maxlength="100">
+             </label>
+             <br/>
+             <br/>
+             <label>
+             Email Address:     <input type="email" name="email" size="30" maxlength="100">
+             </label>
+             <br />
+             <br/>
+             <label>
+             Age:     <input type="number" min="12">
+             </label>
+
+             </fieldset>
+             <fieldset>
+               <legend>
+                 Grading
+               </legend>
+               <label for="hear-about">
+                How much will I get out of 10?
+               </label>
+               <select  style="color:red">
+               <option value="10">10</option>
+               <option value="9">9</option>
+               <option value="8">8</option>
+               <option value="7">7</option>
+               <option value="6">6</option>
+               <option value="5">5</option>
+               </select>
+             </fieldset>
+             <fieldset>
+               <legend>
+               Was the assignment to your liking?
+             </legend>
+             <label>
+              <input type="radio" name="liking" value="yes" />
+              Yes
+             </label>
+             <label>
+              <input type="radio" name="liking" value="no" />
+              No
+             </label>
+             <label>
+              <input type="radio" name="liking" value="maybe" />
+              Maybe
+             </label>
+             </fieldset>
+             <fieldset>
+               <legend>
+               Should I take the same approach for next assignment?
+             </legend>
+             <label>
+              <input type="radio" name="should" value="yes" />
+              Yes
+              </label>
+             <label>
+               <input type="radio" name="should" value="no" />
+               No
+             </label>
+             <label>
+              <input type="radio" name="should" value="maybe" />
+              Maybe
+             </label>
+             </fieldset>
+             <fieldset>
+               <legend>
+                 Further suggestions
+               </legend>
+               <textarea rows="4" cols="40" id="comments"></textarea>
+             </fieldset>
+             <fieldset>
+               <legend>
+                 Terms and Conditions
+               </legend>
+               <label>
+                  <input type="checkbox" name="mail"  />
+                  Email me the confirmation
+               </label>
+               <br/>
+               <br/>
+               <label>
+                  <input type="checkbox" name="terms"  />
+                  I have accepted the terms and conditions
+               </label>
+               <br/>
+               <br/>
+               <label>
+                  <input type="checkbox" name="news"  />
+                  Send me weekly newsletters
+               </label>
+               <br/>
+               <br/>
+               <input type="submit" value=" Confirm Submission" class="sub"/>
+             </fieldset>
+         </div>
+         </article>
